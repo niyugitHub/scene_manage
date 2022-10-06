@@ -1,7 +1,6 @@
 #pragma once
 
-#include "SceneTitle.h"
-#include "SceneMain.h"
+#include"SceneBase.h"
 
 class SceneManager
 {
@@ -11,6 +10,7 @@ public:
 	{
 		kSceneKindTitle,
 		kSceneKindMain,
+		kSceneKindTest,
 
 		kSceneKindNum
 	}SceneKind;
@@ -29,6 +29,8 @@ public:
 private:
 	SceneKind	m_kind;
 
-	SceneTitle	m_title;
-	SceneMain	m_main;
+	SceneBase* m_pScene;
+
+//	SceneTitle	m_title;
+//	SceneMain	m_main;
 };

@@ -13,11 +13,11 @@ public:
 	virtual ~SceneTitle() {}
 
 
-	virtual void init();
-	virtual void end() {}
+	virtual void init()override;
+	virtual void end() override {}
 
-	virtual void update();
-	virtual void draw();
+	virtual SceneBase* update()override;
+	virtual void draw()override;
 
 	virtual bool isEnd() { return m_isEnd; }
 private:
